@@ -1,7 +1,6 @@
-# 📱 Flutter App Architecture (MVVM)
-
-This project follows a clean **MVVM architecture** with a separation of concerns between the core functionalities and app features.
-
+## 📱 Key Features
+- 📆 **Hijri Calendar Integration**
+- 📈 **Radial Chart** for attendance visualization
 ---
 
 ## 🧠 Architecture Overview
@@ -32,12 +31,5 @@ lib/
 - **Clean Code** principles (readable, modular, testable)
 
 ---
-
-## 🎯 Benefits
-
-- 🔄 **Scalable** and easy to maintain
-- 📱 **Responsive UI** with `flutter_screenutil`
-- 🧼 **Clean and organized codebase**
-- 📦 **Modular features** with isolated logic and views
 
 ![image](https://github.com/user-attachments/assets/d5dbc600-c581-42a5-9133-5349db81d56e)
