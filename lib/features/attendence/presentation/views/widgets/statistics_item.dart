@@ -1,9 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:testt/core/theming/styles.dart';
 import 'package:testt/features/attendence/presentation/views/widgets/radial_chart_item.dart';
 
-import '../../../../../core/colors.dart';
+import '../../../../../core/app_strings.dart';
+import '../../../../../core/theming/colors.dart';
 
 class StatisticsItem extends StatelessWidget {
   const StatisticsItem({super.key});
@@ -38,13 +39,8 @@ class StatisticsItem extends StatelessWidget {
                       max: 100,
                     ),
                   ),
-                  Text(
-                    'نسبة الحضور',
-                    style: TextStyle(
-                        fontSize: 11.sp,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
-                  ),
+                  Text(AppStrings.attendancePercentage,
+                      style: AppStyles.font11WhiteBold),
                   SizedBox(height: 16.h),
                 ],
               ),
@@ -60,13 +56,8 @@ class StatisticsItem extends StatelessWidget {
                       isPercentage: false,
                     ),
                   ),
-                  Text(
-                    'حصص اليوم',
-                    style: TextStyle(
-                        fontSize: 11.sp,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
-                  ),
+                  Text(AppStrings.todayLectures,
+                      style: AppStyles.font11WhiteBold),
                   SizedBox(height: 16.h),
                 ],
               ),
@@ -82,11 +73,8 @@ class StatisticsItem extends StatelessWidget {
                         isPercentage: false,
                       )),
                   Text(
-                    'عدد الفصول',
-                    style: TextStyle(
-                        fontSize: 11.sp,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
+                    AppStrings.classNumbers,
+                    style: AppStyles.font11WhiteBold,
                   ),
                   SizedBox(height: 16.h),
                 ],

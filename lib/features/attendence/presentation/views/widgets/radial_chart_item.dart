@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
+import 'package:testt/core/theming/styles.dart';
 
-import '../../../../../core/colors.dart';
+import '../../../../../core/theming/colors.dart';
+
 
 class RadialChartItem extends StatelessWidget {
   final double value;
@@ -64,19 +66,11 @@ class RadialChartItem extends StatelessWidget {
                       children: [
                         TextSpan(
                           text: '%',
-                          style: TextStyle(
-                            fontSize: 12.sp,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style:AppStyles.font12WhiteBold
                         ),
                         TextSpan(
                           text: value.toStringAsFixed(0),
-                          style: TextStyle(
-                            fontSize: 20.sp,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
+                          style: AppStyles.font20WhiteBold
                         ),
                       ],
                     )
@@ -84,11 +78,7 @@ class RadialChartItem extends StatelessWidget {
                       children: [
                         TextSpan(
                           text: value.toStringAsFixed(0),
-                          style: TextStyle(
-                            fontSize: 20.sp,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
+                          style:AppStyles.font20WhiteBold
                         ),
                       ],
                     ),
@@ -96,11 +86,7 @@ class RadialChartItem extends StatelessWidget {
                   SizedBox(height: 5),
                   Text(
                     title,
-                    style: TextStyle(
-                      fontSize: 10.sp,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: AppStyles.font10WhiteBold
                   ),
                 ],
               ),

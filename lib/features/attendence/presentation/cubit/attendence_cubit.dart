@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hijri/hijri_calendar.dart';
@@ -38,9 +37,11 @@ class AttendenceCubit extends Cubit<AttendenceState> {
           ..hMonth = hijriMonth
           ..hDay = day;
 
-        // This will internally convert and validate the date
         final DateTime gregorianDate = date.hijriToGregorian(
-            hijriYear, hijriMonth, day); // safe conversion
+          hijriYear,
+          hijriMonth,
+          day,
+        );
 
         if (date.hMonth == hijriMonth) {
           final formatted = {

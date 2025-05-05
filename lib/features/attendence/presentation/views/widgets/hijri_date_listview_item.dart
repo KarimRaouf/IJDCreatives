@@ -2,8 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:testt/core/theming/styles.dart';
 
-import '../../../../../core/colors.dart';
+import '../../../../../core/theming/colors.dart';
 import '../../cubit/attendence_cubit.dart';
 
 class HijriDateListViewIem extends StatelessWidget {
@@ -32,15 +33,15 @@ class HijriDateListViewIem extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(AttendenceCubit.get(context).daysInMonth[index]['monthName'],
-                style: TextStyle(
-                  fontSize: 10.sp,
-                  color: !AttendenceCubit.get(context)
-                      .isTheSameDayNumber(index: index)
-                      ? Colors.white
-                      : Colors.black,
-                  fontWeight: FontWeight.bold,
-                )),
+            Text(
+              AttendenceCubit.get(context).daysInMonth[index]['monthName'],
+              style: AppStyles.font10WhiteBold.copyWith(
+                color: !AttendenceCubit.get(context)
+                        .isTheSameDayNumber(index: index)
+                    ? Colors.white
+                    : Colors.black,
+              ),
+            ),
             Text(
               AttendenceCubit.get(context)
                   .daysInMonth[index]['dayNumber']
@@ -51,19 +52,17 @@ class HijriDateListViewIem extends StatelessWidget {
                   fontSize: 26.sp,
                   fontWeight: FontWeight.bold,
                   color: !AttendenceCubit.get(context)
-                      .isTheSameDayNumber(index: index)
+                          .isTheSameDayNumber(index: index)
                       ? Colors.white
                       : Colors.black),
             ),
             Text(
               '${AttendenceCubit.get(context).daysInMonth[index]['dayName']}',
-              style: TextStyle(
-                fontSize: 12.sp,
+              style: AppStyles.font12WhiteBold.copyWith(
                 color: !AttendenceCubit.get(context)
-                    .isTheSameDayNumber(index: index)
+                        .isTheSameDayNumber(index: index)
                     ? Colors.white
                     : Colors.black,
-                fontWeight: FontWeight.bold,
               ),
             ),
           ],

@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
+          title: 'IJD Creatives',
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
