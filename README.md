@@ -31,5 +31,6 @@ lib/
 - **Clean Code** principles (readable, modular, testable)
 
 ---
+![Screenshot_20250505_182823](https://github.com/user-attachments/assets/9325c2d8-101e-42dc-9818-fffbf8782217)
 
-![image](https://github.com/user-attachments/assets/d5dbc600-c581-42a5-9133-5349db81d56e)
+
