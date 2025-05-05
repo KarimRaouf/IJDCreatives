@@ -5,7 +5,7 @@ This project follows a clean **MVVM architecture** with a separation of concerns
 ---
 
 ## 🧠 Architecture Overview
-
+```
 lib/
 ├── core/ # Shared and reusable logic
 │ ├── colors/ # App color definitions
@@ -20,9 +20,8 @@ lib/
 │ │ └── model/ # Optional: Data models for the feature
 │
 ├── main.dart # Entry point
+```
 
-
----
 
 ## 🧩 Technologies Used
 
