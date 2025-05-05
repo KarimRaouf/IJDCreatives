@@ -7,17 +7,17 @@ import 'package:meta/meta.dart';
 part 'attendence_state.dart';
 
 class AttendenceCubit extends Cubit<AttendenceState> {
-  AttendenceCubit() : super(AttendenceInitial()) {}
+  AttendenceCubit() : super(AttendenceInitial());
 
   static AttendenceCubit get(context) => BlocProvider.of(context);
 
   HijriCalendar now = HijriCalendar.now();
 
   String getFormattedHijriDate() {
-    final String weekday = now.getDayName(); // الأحد
-    final String day = now.hDay.toInt().toString().padLeft(2, '0'); // 5
-    final String month = now.getLongMonthName(); // رجب
-    final String year = now.hYear.toString(); // 1446
+    final String weekday = now.getDayName();
+    final String day = now.hDay.toInt().toString().padLeft(2, '0');
+    final String month = now.getLongMonthName();
+    final String year = now.hYear.toString();
     return '$weekday، $day $month $yearهـ';
   }
 
@@ -56,7 +56,7 @@ class AttendenceCubit extends Cubit<AttendenceState> {
         emit(AttendenceDaysSuccess());
       } catch (e) {
         emit(AttendenceDaysError());
-        break; // invalid day in Hijri month (e.g., month only has 29 days)
+        break;
       }
     }
   }
